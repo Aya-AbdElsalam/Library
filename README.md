@@ -1,3 +1,6 @@
+# 📚Book Library Project
+## Project Description
+The Book Library Project is an application aimed at applying Object-Oriented Programming (OOP) concepts. This project is still under development, and I am currently working on it.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
