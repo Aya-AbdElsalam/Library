@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReviewsDataProvider from "./context/ReviewsDataApi.jsx";
+import Reviews from "./components/Reviews.jsx";
+import HeaderTop from "./components/HeaderTop.jsx";
+import Banner from "./components/Banner.jsx";
+import HeaderBottom from "./components/HeaderBottom.jsx";
+import AuthorsDataProvider from "./context/AuthorDataApi.jsx";
+import Authors from "./components/Authors.jsx";
+import WhyUs from "./components/WhyUs.jsx";
+import FooterTop from "./components/FooterTop.jsx";
+import FooterBottom from "./components/FooterBottom.jsx";
+import Books from "./components/Books.jsx";
+import BooksDataProvider from "./context/BooksDataApi.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderTop />
+      <HeaderBottom />
+      <Banner />
+      <BooksDataProvider>
+        <Books />
+      </BooksDataProvider>
+      <AuthorsDataProvider>
+        <Authors />
+      </AuthorsDataProvider>
+      <ReviewsDataProvider>
+        <Reviews />
+      </ReviewsDataProvider>
+
+      <WhyUs />
+      <FooterTop />
+      <FooterBottom />
     </div>
   );
 }

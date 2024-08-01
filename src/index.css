@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  transition: 0s;
+  box-sizing: border-box;
+  font-family: "Rubik",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition: all .7s ease;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  font-family: 'Lucida Sans';
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+.container {
+  z-index: 1;
+  position: relative;
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 500px) {
+
+  /* small devices*/
+  .container {
+    max-width: 466px;
+  }
+}
+
+@media (min-width: 576px) {
+
+  /* small devices*/
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  /* medium devices*/
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+
+  /* pc devices*/
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* large screen*/
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.swiper-pagination {
+  position: relative !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #77b748 !important;
 }
